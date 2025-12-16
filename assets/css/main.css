@@ -209,7 +209,7 @@ h6 {
 }
 
 .header .logo img {
-  max-height: 36px;
+  max-height: 90px;
   margin-right: 8px;
 }
 
@@ -3599,6 +3599,7 @@ section,
   color: var(--contrast-color);
   font-size: 14px;
   font-weight: 500;
+  border-radius: 30px;
 }
 
 .service-details .process-section .process-steps .step .step-content h5 {
