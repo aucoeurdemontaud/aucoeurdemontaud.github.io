@@ -894,11 +894,11 @@ section,
   flex-wrap: wrap;
 }
 
-.hero .hero-content .content .cta-group .btn-primary {
+.btn-meet {
   background: var(--accent-color);
   color: var(--contrast-color);
-  padding: 1rem 2.5rem;
-  border-radius: 8px;
+  padding: 10px 20px;
+  border-radius: 20px;
   font-weight: 500;
   font-size: 1rem;
   text-decoration: none;
@@ -907,8 +907,9 @@ section,
   display: inline-block;
 }
 
-.hero .hero-content .content .cta-group .btn-primary:hover {
-  background: color-mix(in srgb, var(--accent-color), black 10%);
+.btn-meet:hover {
+  background: var(--heading-color);
+  color: var(--contrast-color);
   transform: translateY(-2px);
   box-shadow: 0 8px 25px color-mix(in srgb, var(--accent-color), transparent 70%);
 }
@@ -1311,7 +1312,7 @@ section,
   }
 }
 
-.about .content .cta-section .btn-primary {
+.btn-primary {
   background-color: var(--accent-color);
   color: var(--contrast-color);
   padding: 14px 30px;
@@ -1322,7 +1323,7 @@ section,
   border: 2px solid var(--accent-color);
 }
 
-.about .content .cta-section .btn-primary:hover {
+.btn-primary:hover {
   background-color: transparent;
   color: var(--accent-color);
 }
