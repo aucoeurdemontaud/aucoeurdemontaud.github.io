@@ -1,69 +1,35 @@
-(function () {
-    const form = document.querySelector("form.contact-form");
-    if (!form) return;
+var form = document.getElementById("contact-form");
 
-    const loadingEl = form.querySelector(".loading");
-    const errorEl = form.querySelector(".error-message");
-    const sentEl = form.querySelector(".sent-message");
-    const submitBtn = form.querySelector('button[type="submit"]');
+async function handleSubmit(event) {
+    event.preventDefault();
+    var status = document.getElementById("my-form-status");
+    var data = new FormData(event.target);
 
-    function hide(el) { if (el) el.style.display = "none"; }
-    function show(el) { if (el) el.style.display = "block"; }
+    status.innerHTML = `<div class="loading">Envoi en cours...</div>`;
 
-    function setState(state, errorText) {
-        if (state === "idle") {
-            hide(loadingEl); hide(errorEl); hide(sentEl);
-            if (submitBtn) submitBtn.disabled = false;
-            return;
+    fetch(event.target.action, {
+        method: form.method,
+        body: data,
+        headers: {
+            'Accept': 'application/json'
         }
-        if (state === "loading") {
-            show(loadingEl); hide(errorEl); hide(sentEl);
-            if (submitBtn) submitBtn.disabled = true;
-            return;
-        }
-        if (state === "success") {
-            hide(loadingEl); hide(errorEl); show(sentEl);
-            if (submitBtn) submitBtn.disabled = false;
-            return;
-        }
-        if (state === "error") {
-            hide(loadingEl); show(errorEl); hide(sentEl);
-            if (errorEl && errorText) errorEl.textContent = errorText;
-            if (submitBtn) submitBtn.disabled = false;
-        }
-    }
-
-    setState("idle");
-
-    form.addEventListener("submit", async (e) => {
-        e.preventDefault();
-        setState("loading");
-
-        try {
-            const res = await fetch(form.action, {
-                method: (form.method || "POST").toUpperCase(),
-                body: new FormData(form),
-                headers: { "Accept": "application/json" }
-            });
-
-            let data = {};
-            try { data = await res.json(); } catch (_) {}
-
-            if (res.ok) {
-                setState("success");
-                form.reset();
-
-                if (data && data.next) {
-                    setTimeout(() => { window.location.href = data.next; }, 700);
+    }).then(response => {
+        if (response.ok) {
+            status.innerHTML = `<div class="sent-message">Votre message a été envoyé. Merci !</div>`;
+            form.reset()
+        } else {
+            response.json().then(data => {
+                let message;
+                if (Object.hasOwn(data, 'errors')) {
+                    message = data["errors"].map(error => error["message"]).join(", ")
+                } else {
+                    message = "Erreur lors de l'envoi du message !"
                 }
-            } else {
-                const msg =
-                    (data && (data.error || data.message)) ||
-                    "Erreur lors de l'envoi du message";
-                setState("error", msg);
-            }
-        } catch (err) {
-            setState("error", "Impossible d'envoyer le message (erreur réseau).");
+                status.innerHTML = `<div class="error-message">${message}</div>`;
+            })
         }
+    }).catch(error => {
+        status.innerHTML = `<div class="error-message">Impossible d'envoyer le message. Veuillez réessayer plus tard.</div>`;
     });
-})();
+}
+form.addEventListener("submit", handleSubmit)
