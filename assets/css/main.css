@@ -882,7 +882,6 @@ section,
 .hero .hero-content .content p {
   font-size: 1.125rem;
   line-height: 1.7;
-  color: color-mix(in srgb, var(--default-color), transparent 20%);
   margin-bottom: 1rem;
   max-width: 90%;
 }
@@ -3609,9 +3608,8 @@ section,
 }
 
 .service-details .process-section .process-steps .step .step-content p {
-  font-size: 0.95rem;
+  font-size: 1.1rem;
   line-height: 1.6;
-  color: color-mix(in srgb, var(--default-color), transparent 20%);
   margin: 0;
 }
 
