@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
   <meta charset="utf-8">
@@ -15,7 +15,8 @@
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect">
   <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Homemade+Apple&display=swap" rel="stylesheet">
+
 
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -27,27 +28,26 @@
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
 
-  <!-- =======================================================
-  * Template Name: CoreBiz
-  * Template URL: https://bootstrapmade.com/corebiz-bootstrap-business-template/
-  * Updated: Aug 30 2025 with Bootstrap v5.3.8
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
 </head>
 
 <body class="index-page">
 
   <header id="header" class="header sticky-top">
-
     <div class="branding d-flex align-items-center">
-
       <div class="container position-relative d-flex align-items-center justify-content-between">
-        <a href="index.html" class="logo d-flex align-items-center">
+
+        <!-- Logo -->
+        <a href="index.html" class="logo d-flex align-items-center order-1">
           <img src="assets/img/logo-full.png" alt="">
         </a>
 
-        <nav id="navmenu" class="navmenu">
+        <!-- Bouton (au milieu sur mobile) -->
+        <a class="btn btn-meet order-2 order-xl-3 mx-auto mx-xl-0" href="#meet">
+          Rencontrons-nous !
+        </a>
+
+        <!-- Menu -->
+        <nav id="navmenu" class="navmenu order-3 order-xl-2">
           <ul>
             <li><a href="#accueil" class="active">Accueil</a></li>
             <li><a href="#projets">Nos projets</a></li>
@@ -56,12 +56,9 @@
           </ul>
           <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
         </nav>
-        <a class="btn btn-meet" href="#meet">Rencontrons-nous !</a>
 
       </div>
-
     </div>
-
   </header>
 
   <main class="main">
@@ -113,6 +110,11 @@
                   <p>Nous visons un idéal de démocratie directe pour remettre les habitants de Montaud au cœur des décisions locales concernant les investissements et projets de développement et aménagement du village; mais aussi afin de créer une dynamique commune autour de nos enfants, de moments conviviaux et d’activités pour tous !</p>
                   <br>
                   <p>Montaud mérite mieux qu’un simple statut de petite commune rurale !</p>
+                </div>
+                <div class="manuscrit">
+                  Avec mon équipe, nous nous engageons à améliorer votre quotidien, dans un esprit de bienveillance et de transparence.<br>
+                  <br>
+                  Magali Wuyts
                 </div>
               </div>
               <div class="col-lg-6">
@@ -211,7 +213,7 @@
           <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
             <div class="member-card">
               <div class="member-image-wrapper">
-                <img src="assets/img/person/f.png" class="img-fluid" alt="Pascaline Lociero">
+                <img src="assets/img/person/pascaline.jpg" class="img-fluid" alt="Pascaline Lociero">
               </div>
               <div class="member-content">
                 <h4 class="member-name">Pascaline Lociero</h4>
@@ -286,27 +288,30 @@
         <div class="row">
 
           <div class="col-lg-5 aos-init aos-animate" data-aos="fade-up">
-            <h2 class="faq-title" style="margin-top: 20px; margin-bottom: 30px;">Vous avez des questions ? Des idées ?</h2>
+            <h2 class="faq-title" style="margin-top: 20px; margin-bottom: 30px;">Vous avez des questions ?<br> Des idées ?<br> Envie de nous rejoindre ?</h2>
             <p>
               Nous croyons que les meilleurs projets naissent de l’échange et du dialogue.
               C’est pourquoi nous allons à la rencontre des habitantes et des habitants de Montaud, notamment à travers des temps de porte-à-porte, pour recueillir vos idées, vos questions et vos propositions pour l’avenir du village.
             </p>
+          </div>
 
+          <div class="col-lg-2 aos-init aos-animate" data-aos="fade-up">
             <div class="text-center d-none d-lg-block aos-init aos-animate" data-aos="fade-up" data-aos-delay="200">
-              <svg class="faq-arrow" width="200" height="211" viewBox="0 0 200 211" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <svg class="faq-arrow" width="120" height="211" viewBox="0 0 200 211" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin-top: 40px">
                 <path d="M198.804 194.488C189.279 189.596 179.529 185.52 169.407 182.07L169.384 182.049C169.227 181.994 169.07 181.939 168.912 181.884C166.669 181.139 165.906 184.546 167.669 185.615C174.053 189.473 182.761 191.837 189.146 195.695C156.603 195.912 119.781 196.591 91.266 179.049C62.5221 161.368 48.1094 130.695 56.934 98.891C84.5539 98.7247 112.556 84.0176 129.508 62.667C136.396 53.9724 146.193 35.1448 129.773 30.2717C114.292 25.6624 93.7109 41.8875 83.1971 51.3147C70.1109 63.039 59.63 78.433 54.2039 95.0087C52.1221 94.9842 50.0776 94.8683 48.0703 94.6608C30.1803 92.8027 11.2197 83.6338 5.44902 65.1074C-1.88449 41.5699 14.4994 19.0183 27.9202 1.56641C28.6411 0.625793 27.2862 -0.561638 26.5419 0.358501C13.4588 16.4098 -0.221091 34.5242 0.896608 56.5659C1.8218 74.6941 14.221 87.9401 30.4121 94.2058C37.7076 97.0203 45.3454 98.5003 53.0334 98.8449C47.8679 117.532 49.2961 137.487 60.7729 155.283C87.7615 197.081 139.616 201.147 184.786 201.155L174.332 206.827C172.119 208.033 174.345 211.287 176.537 210.105C182.06 207.125 187.582 204.122 193.084 201.144C193.346 201.147 195.161 199.887 195.423 199.868C197.08 198.548 193.084 201.144 195.528 199.81C196.688 199.192 197.846 198.552 199.006 197.935C200.397 197.167 200.007 195.087 198.804 194.488ZM60.8213 88.0427C67.6894 72.648 78.8538 59.1566 92.1207 49.0388C98.8475 43.9065 106.334 39.2953 114.188 36.1439C117.295 34.8947 120.798 33.6609 124.168 33.635C134.365 33.5511 136.354 42.9911 132.638 51.031C120.47 77.4222 86.8639 93.9837 58.0983 94.9666C58.8971 92.6666 59.783 90.3603 60.8213 88.0427Z" fill="currentColor"></path>
               </svg>
             </div>
           </div>
 
-          <div class="col-lg-7 aos-init aos-animate" data-aos="fade-up" data-aos-delay="300">
-            <p>
+
+          <div class="col-lg-5 aos-init aos-animate" data-aos="fade-up" data-aos-delay="300">
+            <h3 style="margin-top: 2em; margin-bottom: 2em; font-size: 1.2em; font-weight: bold;">
               Pour participer à la construction de notre avenir, rencontrons-nous et échangeons ensemble lors de réunions publiques.
-            </p>
+            </h3>
             <p>
               Pour cela, nous vous donnons rendez-vous au dates suivantes, à la salle Pierre Combette :
             </p>
-            <ul>
+            <ul class="dates-rencontre">
               <li>Vendredi 23 janvier 2026 dès 19h00</li>
               <li>Vendredi 20 février  2026 dès 19h00</li>
               <li>Vendredi 06 mars   2026 dès 19h00</li>
@@ -327,68 +332,12 @@
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
         <div class="row align-items-stretch">
-          <div class="col-lg-7 order-lg-1 order-2" data-aos="fade-right" data-aos-delay="200">
-            <div class="contact-form-container">
-              <div class="form-intro">
-                <h2>Envoyez-nous un message</h2>
-              </div>
 
-              <form id="contact-form" action="https://formspree.io/f/xvzprwze" method="post" class="contact-form">
 
-                <div class="row">
-                  <div class="col-md-6">
-                    <div class="form-field">
-                      <input type="text" name="name" class="form-input" id="userName" placeholder="Prénom et nom" required="">
-                      <label for="userName" class="field-label">Prénom et nom</label>
-                    </div>
-                  </div>
-
-                  <div class="col-md-6">
-                    <div class="form-field">
-                      <input type="email" class="form-input" name="email" id="userEmail" placeholder="Votre adresse mail" required="">
-                      <label for="userEmail" class="field-label">Adresse mail</label>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="row">
-                  <div class="col-md-6">
-                    <div class="form-field">
-                      <input type="tel" class="form-input" name="phone" id="userPhone" placeholder="Téléphone (facultatif)">
-                      <label for="userPhone" class="field-label">Téléphone</label>
-                    </div>
-                  </div>
-
-                  <div class="col-md-6">
-                    <div class="form-field">
-                      <input type="text" class="form-input" name="subject" id="messageSubject" placeholder="Sujet" required="">
-                      <label for="messageSubject" class="field-label">Sujet</label>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="form-field message-field">
-                  <textarea class="form-input message-input" name="message" id="userMessage" rows="5" placeholder="Votre message" required=""></textarea>
-                  <label for="userMessage" class="field-label">Message</label>
-                </div>
-
-                <div id="my-form-status" class="my-3"></div>
-
-                <button type="submit" class="send-button">
-                  Envoyer votre message
-                  <span class="button-arrow">→</span>
-                </button>
-              </form>
-            </div>
-          </div>
-
-          <div class="col-lg-5 order-lg-2 order-1" data-aos="fade-left" data-aos-delay="300">
+          <div class="col-12" data-aos="fade-left" data-aos-delay="300">
             <div class="contact-sidebar">
-              <div class="contact-header">
-                <h3>Contactez nous directement</h3>
-              </div>
 
-              <div class="contact-methods">
+              <div class="contact-methods d-flex justify-content-center">
 
                 <div class="contact-method" data-aos="fade-in" data-aos-delay="400">
                   <div class="contact-icon">
@@ -400,7 +349,7 @@
                   </div>
                 </div>
 
-                <div class="contact-method" data-aos="fade-in" data-aos-delay="450">
+                <!--div class="contact-method" data-aos="fade-in" data-aos-delay="450">
                   <div class="contact-icon">
                     <i class="bi bi-telephone"></i>
                   </div>
@@ -408,7 +357,7 @@
                     <span class="method-label">Téléphone</span>
                     <p>06 11 22 33 55</p>
                   </div>
-                </div>
+                </div-->
 
               </div>
 
@@ -423,12 +372,8 @@
   <footer id="footer" class="footer light-background">
 
     <div class="container copyright text-center mt-4">
-      <p><strong>Au coeur de Montaud</strong> | <a href="#">Conditions d'utilisation</a> | <a href="">Suivez-nous <i class="bi bi-facebook"></i></a></p>
+      <p><strong>Au coeur de Montaud</strong> | <a href="conditions-utilisation.html">Conditions d'utilisation</a> | <a href="mentions-legales.html">Mentions légales</a></p>
       <div class="credits">
-        <!-- All the links in the footer should remain intact. -->
-        <!-- You can delete the links only if you've purchased the pro version. -->
-        <!-- Licensing information: https://bootstrapmade.com/license/ -->
-        <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
         Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
       </div>
     </div>
@@ -448,7 +393,6 @@
 
   <!-- Vendor JS Files -->
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/formspree/submit.js"></script>
   <script src="assets/vendor/aos/aos.js"></script>
   <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
   <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>

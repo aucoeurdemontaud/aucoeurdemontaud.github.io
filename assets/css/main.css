@@ -883,7 +883,7 @@ section,
   font-size: 1.125rem;
   line-height: 1.7;
   color: color-mix(in srgb, var(--default-color), transparent 20%);
-  margin-bottom: 3rem;
+  margin-bottom: 1rem;
   max-width: 90%;
 }
 
@@ -3241,9 +3241,8 @@ section,
 }
 
 .contact .contact-sidebar {
-  background: color-mix(in srgb, var(--accent-color), transparent 97%);
   height: 100%;
-  padding: 60px 40px;
+  padding: 0 40px;
 }
 
 .contact .contact-sidebar .contact-header {
@@ -4872,4 +4871,27 @@ section,
 --------------------------------------------------------------*/
 .starter-section {
   /* Add your styles here */
+}
+
+.dates-rencontre li {
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.manuscrit {
+  font-family: 'Homemade Apple', cursive;
+  font-size: 1.5rem;
+  padding: 6rem 4rem 0 0;
+  transform: rotate(-2deg);
+  letter-spacing: 0.03em;
+  line-height: 2;
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+  .manuscrit {
+    padding: 1rem;
+    margin-bottom: 4rem;
+    transform: rotate(-1deg);
+  }
 }
