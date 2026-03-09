@@ -1141,8 +1141,8 @@ section,
 }
 
 .featured-services .service-icon {
-  width: 80px;
-  height: 80px;
+  width: 40px;
+  height: 40px;
   margin: 0 auto 30px;
   display: flex;
   align-items: center;
@@ -1153,7 +1153,7 @@ section,
 }
 
 .featured-services .service-icon i {
-  font-size: 36px;
+  font-size: 1em;
   color: var(--accent-color);
   transition: all 0.4s ease;
 }
@@ -1912,11 +1912,11 @@ section,
   transition: all 0.4s ease;
   height: 100%;
   position: relative;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
 }
 
 .services .service-item:hover {
   transform: translateY(-8px);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
 }
 
 .services .service-item:hover .service-icon i {
@@ -1932,18 +1932,17 @@ section,
 }
 
 .services .service-icon {
-  width: 80px;
-  height: 80px;
+  width: 20px;
+  height: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 40px;
   background: linear-gradient(135deg, var(--accent-color), color-mix(in srgb, var(--accent-color), #6c5ce7 20%));
   border-radius: 50%;
 }
 
 .services .service-icon i {
-  font-size: 36px;
+  font-size: 1em;
   color: var(--contrast-color);
   transition: transform 0.3s ease;
 }
@@ -1961,6 +1960,11 @@ section,
   line-height: 1.7;
   color: color-mix(in srgb, var(--default-color), transparent 20%);
   margin-bottom: 40px;
+}
+
+.services ul li {
+  font-size: 16px;
+  color: color-mix(in srgb, var(--default-color), transparent 20%);
 }
 
 .services .service-link {
@@ -1991,13 +1995,12 @@ section,
   }
 
   .services .service-icon {
-    width: 64px;
-    height: 64px;
-    margin-bottom: 32px;
+    width: 20px;
+    height: 20px;
   }
 
   .services .service-icon i {
-    font-size: 28px;
+    font-size: 1em;
   }
 
   .services h3 {
@@ -4907,4 +4910,26 @@ section,
   height: 100%;
   border: 0;
   border-radius: 10px;
+}
+
+.service-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.service-header h3 {
+  margin: 0;
+}
+
+.service-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.service-header h3 {
+  margin: 0;
 }
